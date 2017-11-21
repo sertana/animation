@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="secflag.css">
+</head>
+<body>
+	<div id ="out">
+		<div id="top"><h1 id="bharat">INDIAN NATIONAL FLAG</h1></div>
+		<div id="mid">
+			<div id="left">
+			</div>
+			<div id="middle">
+				<div id="orange">
+				</div>
+				<div id="white">
+					<div id="chakra">
+					</div>
+				</div>
+				<div id="green">
+				</div>
+			</div>
+			<div id="right">
+			</div>
+		</div>
+		<div id="bottom"></div>
+<button onclick="flag()">Click</button>
+	</div>
+		
+	<script type="text/javascript">
+			function flag() {
+			var org = document.getElementById("orange");
+			var wht = document.getElementById("white");
+			var grn = document.getElementById("green");
+			var chk = document.getElementById("chakra");
+			var tit = document.getElementById("bharat");
+			var img1 = document.getElementById("left");
+			var img2 = document.getElementById("right");
+			var cric = document.getElementById("bottom");
+			var pos = 0;
+			var id = setInterval(frame,10);
+			function frame() {
+				if (pos == 450) {
+					clearInterval(id);
+					cric.style.backgroundImage = "url('hritik.webp')";
+					img1.style.backgroundImage = " url('satya.png')";
+					img1.style.opacity = 1;
+					img2.style.backgroundImage = "url('gandhi.jpg')";
+					img2.style.opacity = 1;
+
+
+
+
+				} else {
+					pos++;
+					org.style.width = pos + 'px';
+					wht.style.width = pos + 'px';
+					grn.style.width = pos + 'px';
+					chk.style.opacity = (pos-350) * .01;
+				    tit.style.opacity = (pos-350) * .01;
+				    img1.style.opacity = 1 - (pos/450);
+				    img2.style.opacity = 1 - (pos/450);
+
+				}
+			}
+
+		}
+	</script>
+
+
+</body>
+</html>
